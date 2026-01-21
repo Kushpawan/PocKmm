@@ -1,0 +1,49 @@
+# JetBrains IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Android Studio
+captures/
+externalNativeBuild/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aar
+*.ap_
+*.dex
+*.class
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Kotlin
+.kotlin/
+
+# iOS (Xcode, CocoaPods, etc.)
+iosApp/iosApp.xcworkspace/
+iosApp/iosApp.xcodeproj/project.xcworkspace/
+iosApp/iosApp.xcodeproj/xcuserdata/
+iosApp/DerivedData/
+iosApp/Build/
+iosApp/Index/
+.pnpm-debug.log*
+node_modules/
+.xcworkspace/
+xcuserdata/
+DerivedData/
+*.moved-aside
+*.xcuserstate
+podfile.lock
+.cocoapods/
+
+# Local configuration files
+local.properties
+
+# OS-specific files
+.DS_Store
+Thumbs.db
