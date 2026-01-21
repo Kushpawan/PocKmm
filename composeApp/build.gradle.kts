@@ -1,4 +1,3 @@
-import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
@@ -38,7 +37,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.linarc.kmm_poc"
+    namespace = "com.linarc.kmmpoc"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {

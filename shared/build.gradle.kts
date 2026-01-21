@@ -39,7 +39,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.linarc.kmm_poc.shared"
+    namespace = "com.linarc.kmmpoc.shared"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
