@@ -7,12 +7,19 @@ class HomeViewModelWrapper: ObservableObject {
 
     init() {
         self.viewModel = HomeViewModel()
-        self.items = viewModel.homeState.value as? [HomeItem] ?? []
+        setupObserver()
+    }
+
+    private func setupObserver() {
+        viewModel.observeHomeState { [weak self] newItems in
+            DispatchQueue.main.async {
+                self?.items = newItems
+            }
+        }
     }
 
     func update(name: String, email: String, dob: String) {
         viewModel.updateList(name: name, email: email, dob: dob)
-        self.items = viewModel.homeState.value as? [HomeItem] ?? []
     }
 }
 
