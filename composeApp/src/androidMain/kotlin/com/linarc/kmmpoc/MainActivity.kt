@@ -91,8 +91,7 @@ fun HomeList(homeViewModel: HomeViewModel) {
     Box(modifier = Modifier.fillMaxSize()) {
         Column(modifier = Modifier
             .fillMaxSize()
-            .padding(top = 32.dp),
-            verticalArrangement = Arrangement.Center
+            .padding(top = 42.dp)
         ) {
 
             Column(modifier = Modifier.padding(16.dp)) {
