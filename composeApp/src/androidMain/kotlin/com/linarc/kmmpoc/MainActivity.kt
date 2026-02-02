@@ -9,6 +9,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -52,7 +53,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun HomeList(homeViewModel: HomeViewModel) {
-    val listItem by homeViewModel.homeState.collectAsState()
+    val listItem by homeViewModel.savedUsers.collectAsState()
     val loginState by homeViewModel.loginState.collectAsState()
     val context = LocalContext.current
 
@@ -90,7 +91,9 @@ fun HomeList(homeViewModel: HomeViewModel) {
     Box(modifier = Modifier.fillMaxSize()) {
         Column(modifier = Modifier
             .fillMaxSize()
-            .padding(top = 32.dp)) {
+            .padding(top = 32.dp),
+            verticalArrangement = Arrangement.Center
+        ) {
 
             Column(modifier = Modifier.padding(16.dp)) {
                 OutlinedTextField(
@@ -158,8 +161,8 @@ fun HomeList(homeViewModel: HomeViewModel) {
                         .background(color = Color.LightGray)
                 ) {
                     Column(modifier = Modifier.padding(16.dp)) {
-                        Text(text = "${item.name} (${item.email})")
-                        Text(text = "DOB: ${item.dob}", color = Color.DarkGray)
+                        Text(text = "${item.username} (${item.token})")
+                        Text(text = "Role: ${item.role}", color = Color.DarkGray)
                     }
                 }
             }
