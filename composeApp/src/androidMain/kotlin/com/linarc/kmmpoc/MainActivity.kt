@@ -36,6 +36,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
+import com.linarc.testdesignsystem.PrimaryButton
+import com.linarc.testdesignsystem.SecondaryButton
 import java.util.Calendar
 
 class MainActivity : ComponentActivity() {
@@ -134,9 +136,8 @@ fun HomeList(homeViewModel: HomeViewModel) {
 
                 Spacer(modifier = Modifier.height(16.dp))
 
-                Button(
+                SecondaryButton(
                     modifier = Modifier.fillMaxWidth(),
-                    enabled = loginState !is LoginState.Loading,
                     onClick = {
                         if (username.isNotBlank() && password.isNotBlank()) {
                             homeViewModel.login(username, password)
@@ -144,9 +145,7 @@ fun HomeList(homeViewModel: HomeViewModel) {
                             Toast.makeText(context, "Enter username and password", Toast.LENGTH_SHORT).show()
                         }
                     },
-                    content = {
-                        Text("Login")
-                    }
+                    text = "Loginnn"
                 )
             }
 

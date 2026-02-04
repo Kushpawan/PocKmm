@@ -30,3 +30,6 @@ dependencyResolutionManagement {
 
 include(":composeApp")
 include(":shared")
+include(":testshared2")
+include(":testDesignSystem")
+project(":testDesignSystem").projectDir = file("//Users/pawank/AndroidStudioProjects/testDesignSystemApp/testDesignSystem")

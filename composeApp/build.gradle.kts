@@ -30,6 +30,7 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
             implementation(projects.shared)
+            api(project(":testDesignSystem"))
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
